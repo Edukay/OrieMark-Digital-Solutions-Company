@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="OrieMark Digital Solutions — Nigeria's premier digital agency. Web development, mobile apps, design, ads, and premium smart gadgets.">
+  <meta name="keywords" content="web development Nigeria, mobile app Lagos, digital agency, smart gadgets Nigeria, Facebook Ads Nigeria, Google Ads Nigeria">
+  <meta property="og:title" content="OrieMark Digital Solutions">
+  <meta property="og:description" content="Premium digital services and smart gadgets in Nigeria.">
+  <meta property="og:type" content="website">
+  <title>OrieMark Digital Solutions — Web • Apps • Design • Gadgets</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" type="image/png" href="Images/Screenshot_20260413-121614-removebg-preview.png">
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<header id="navbar" class="dark-bg">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a class="nav-logo light" data-page="home" href="#" aria-label="OrieMark Home">
+      <div class="logo-emblem">
+        <img src="Images/Screenshot_20260413-121614-removebg-preview.png" alt="OrieMark logo" width="40" height="40">
+      </div>
+      <span class="logo-name">Orie<span>Mark</span></span>
+    </a>
+
+    <!-- Desktop links -->
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="nav-link light-link active" data-page="home" href="#">Home</a>
+      <a class="nav-link light-link" data-page="services" href="#">Services</a>
+      <a class="nav-link light-link" data-page="shop" href="#">Smart Gadgets</a>
+    </nav>
+
+    <!-- Right actions -->
+    <div class="nav-right">
+      <button class="cart-btn" aria-label="Shopping cart" onclick="showPage('shop')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        Cart
+        <span class="cart-count" aria-live="polite">0</span>
+      </button>
+      <a class="btn btn-primary btn-sm" data-page="services" href="#">Get Started</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation menu">
+  <a data-page="home" href="#">🏠 Home</a>
+  <a data-page="services" href="#">⚙️ Services</a>
+  <a data-page="shop" href="#">🛒 Smart Gadgets Store</a>
+  <a href="mailto:oriemark32@gmail.com" style="margin-top:8px">📧 oriemark32@gmail.com</a>
+  <a href="tel:+2348134018159" style="margin-top:4px">📞 +234 813 401 8159</a>
+</div>
+
+
+<!-- ============================================================
+     HOME PAGE
+     ============================================================ -->
+<main class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero section">
+    <div class="hero-mesh">
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-inner">
+      <!-- Content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <div class="badge-pulse"></div>
+          <span>Nigeria's #1 Digital Agency</span>
+        </div>
+        <h1 class="hero-title">
+          Your Business,<br>
+          <em>Digitally Unstoppable</em>
+        </h1>
+        <p class="hero-sub">
+          From cutting-edge websites and mobile apps to premium smart gadgets and high-converting ads — OrieMark engineers your digital success.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" data-page="services" href="#">
+            Explore Services
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn-ghost btn-lg" data-page="shop" href="#">Browse Gadgets</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">20+</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div>
+            <div class="stat-num">98%</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+          <div>
+            <div class="stat-num">3yrs</div>
+            <div class="stat-label">Industry Experience</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating cards visual -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="floating-card fc-1">
+          <div class="fc-icon">🌐</div>
+          <div class="fc-title">Web Development</div>
+          <div class="fc-sub">React · Node · WordPress</div>
+          <div class="fc-bar"><div class="fc-bar-fill" style="width:88%"></div></div>
+        </div>
+        <div class="floating-card fc-2">
+          <div class="fc-icon">📱</div>
+          <div class="fc-title">Mobile Apps</div>
+          <div class="fc-sub">iOS · Android · Flutter</div>
+          <div class="fc-bar"><div class="fc-bar-fill" style="width:76%"></div></div>
+        </div>
+        <div class="floating-card fc-3">
+          <div class="fc-icon">📢</div>
+          <div class="fc-title">Meta & Google Ads</div>
+          <div class="fc-sub">Performance Marketing</div>
+          <div class="fc-bar"><div class="fc-bar-fill" style="width:92%"></div></div>
+        </div>
+        <div class="floating-card fc-4">
+          <div class="fc-icon">🎨</div>
+          <div class="fc-title">Product Design</div>
+          <div class="fc-sub">Figma · Illustrator · Brand</div>
+          <div class="fc-bar"><div class="fc-bar-fill" style="width:83%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section class="home-services">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">What We Do</span>
+        <h2>Comprehensive Digital Services</h2>
+        <p>Everything your business needs to thrive in the digital age — designed and delivered by a team that cares about your results.</p>
+      </div>
+      <div class="services-grid">
+        <!-- Web Dev -->
+        <div class="service-card reveal" data-page="services" style="cursor:pointer">
+          <div class="sc-number">01 — WEB DEVELOPMENT</div>
+          <div class="sc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:var(--blue-600)">
+              <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+          </div>
+          <div class="sc-title">Web Development</div>
+          <div class="sc-desc">High-performance websites and web applications built for speed, SEO, and conversion. From landing pages to full platforms.</div>
+          <div class="sc-arrow">→</div>
+        </div>
+
+        <!-- Mobile -->
+        <div class="service-card reveal" data-page="services" style="cursor:pointer">
+          <div class="sc-number">02 — MOBILE APPS</div>
+          <div class="sc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:var(--blue-600)">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+            </svg>
+          </div>
+          <div class="sc-title">Mobile App Development</div>
+          <div class="sc-desc">Cross-platform iOS & Android apps with seamless UX and robust backends that users love and businesses scale with.</div>
+          <div class="sc-arrow">→</div>
+        </div>
+
+        <!-- Design -->
+        <div class="service-card reveal" data-page="services" style="cursor:pointer">
+          <div class="sc-number">03 — DESIGN</div>
+          <div class="sc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:var(--blue-600)">
+              <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+            </svg>
+          </div>
+          <div class="sc-title">Product & Graphics Design</div>
+          <div class="sc-desc">Brand identities, UI/UX design, marketing materials, and visual content that builds recognition and trust.</div>
+          <div class="sc-arrow">→</div>
+        </div>
+
+        <!-- Ads -->
+        <div class="service-card reveal" data-page="services" style="cursor:pointer">
+          <div class="sc-number">04 — DIGITAL ADS</div>
+          <div class="sc-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:var(--blue-600)">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+            </svg>
+          </div>
+          <div class="sc-title">Meta & Google Ads</div>
+          <div class="sc-desc">Data-driven advertising campaigns across Facebook, Instagram, and Google that reach the right audience and maximize ROI.</div>
+          <div class="sc-arrow">→</div>
+        </div>
+
+        <!-- Shop (wide card) -->
+        <div class="service-card reveal" data-page="shop" style="cursor:pointer;background:linear-gradient(135deg,var(--blue-50),var(--surface));grid-column:span 2">
+          <div class="sc-number">05 — SMART GADGETS STORE</div>
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:24px">
+            <div>
+              <div class="sc-icon" style="background:white">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="color:var(--blue-600)">
+                  <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/>
+                  <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+              </div>
+              <div class="sc-title">Smart Gadgets Sales</div>
+              <div class="sc-desc">Smartphones, smartwatches, audio gear, laptops,  accessories and Cameras — curated for quality, priced competitively, shipped across Nigeria.</div>
+            </div>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-top:4px">
+              <span style="background:white;border:1px solid var(--border);border-radius:50px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-2)">📱 Phones</span>
+              <span style="background:white;border:1px solid var(--border);border-radius:50px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-2)">⌚ Watches</span>
+              <span style="background:white;border:1px solid var(--border);border-radius:50px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-2)">🎧 Audio</span>
+              <span style="background:white;border:1px solid var(--border);border-radius:50px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-2)">💻 Laptops</span>
+              <span style="background:white;border:1px solid var(--border);border-radius:50px;padding:5px 14px;font-size:12px;font-weight:600;color:var(--text-2)">📷 Cameras</span>
+            </div>
+          </div>
+          <div class="sc-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY ORIEMARK -->
+  <section class="why-section">
+    <div class="container">
+      <div class="why-inner">
+        <!-- Visual card -->
+        <div class="why-visual reveal">
+          <div class="why-card">
+            <div class="why-big-num">5★</div>
+            <div class="why-items">
+              <div class="why-item">
+                <div class="wi-icon">⚡</div>
+                <div><div class="wi-title">Fast, On-Time Delivery</div><div class="wi-desc">We ship projects within agreed timelines, every time.</div></div>
+              </div>
+              <div class="why-item">
+                <div class="wi-icon">🔒</div>
+                <div><div class="wi-title">Secure & Scalable</div><div class="wi-desc">Enterprise-grade architecture built to grow with you.</div></div>
+              </div>
+              <div class="why-item">
+                <div class="wi-icon">📊</div>
+                <div><div class="wi-title">Data-Driven Decisions</div><div class="wi-desc">Every strategy is backed by analytics and real KPIs.</div></div>
+              </div>
+              <div class="why-item">
+                <div class="wi-icon">🤝</div>
+                <div><div class="wi-title">Dedicated Support</div><div class="wi-desc">Post-launch care and ongoing maintenance included.</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="why-badge">
+            <div class="wb-num">20+</div>
+            <div class="wb-lbl">Satisfied clients<br>across Nigeria</div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="why-content reveal">
+          <span class="tag">Why OrieMark</span>
+          <h2>We Don't Just Build.<br>We Grow Your Business.</h2>
+          <p>Most agencies stop at delivery. We stay invested in your success — from strategy through launch, and beyond. That's the OrieMark difference.</p>
+          <div class="why-points">
+            <div class="wp-item">
+              <div class="wp-icon">🎯</div>
+              <div>
+                <div class="wp-title">Goal-Aligned Strategy</div>
+                <div class="wp-desc">Every project starts with understanding your business objectives, not just your feature wishlist.</div>
+              </div>
+            </div>
+            <div class="wp-item">
+              <div class="wp-icon">🚀</div>
+              <div>
+                <div class="wp-title">Modern Tech Stack</div>
+                <div class="wp-desc">We use React, Flutter, Node.js, and cloud infrastructure to build future-proof products.</div>
+              </div>
+            </div>
+            <div class="wp-item">
+              <div class="wp-icon">💬</div>
+              <div>
+                <div class="wp-title">Transparent Communication</div>
+                <div class="wp-desc">Weekly progress reports, clear timelines, and a dedicated project manager on every engagement.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <div class="container">
+      <span class="tag" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.85)">Let's Work Together</span>
+      <h2>Ready to Go Digital?</h2>
+      <p>Join 20+ businesses that trust OrieMark to power their digital growth. Let's build something great together.</p>
+      <div class="cta-btns">
+        <button class="btn btn-primary btn-lg" onclick="document.getElementById('chatLauncher').click()">
+          💬 Chat With Us Now
+        </button>
+        <a class="btn btn-ghost btn-lg" data-page="services" href="#">View Services & Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="nav-logo" data-page="home" href="#" style="margin-bottom:0">
+            <div class="logo-emblem">
+        <img src="Images/Screenshot_20260413-121614-removebg-preview.png" alt="OrieMark logo" width="40" height="40">
+                <circle cx="9" cy="12" r="5.5" stroke="white" stroke-width="2.2"/>
+                <circle cx="15" cy="12" r="5.5" stroke="white" stroke-width="2.2"/>
+                <path d="M11.5 9.5 Q12 8 13 9.5 Q14 11 13 12.5 Q12 14 11 12.5 Q10 11 11.5 9.5Z" fill="white"/>
+              </svg>
+            </div>
+            <span class="logo-name">Orie<span>Mark</span></span>
+          </a>
+          <p>Nigeria's premier digital solutions company. We design, build, and grow your digital presence with world-class expertise.</p>
+          <div class="footer-socials">
+            <a class="social-btn" href="https://facebook.com/OrieMark" target="_blank" rel="noopener" aria-label="Facebook — OrieMark" title="Facebook: OrieMark"><img src="Images/facebook.png" alt="Facebook" width="24" height="24"></a>
+            <a class="social-btn" href="https://instagram.com/Orie_mark" target="_blank" rel="noopener" aria-label="Instagram — @Orie_mark" title="Instagram: @Orie_mark"><img src="Images/insta logo.png" alt="Instagram" width="24" height="24"></a>
+            <a class="social-btn" href="https://wa.me/2348134018159" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp Us"><img src="Images/whatsapp logo.png" alt="WhatsApp" width="24" height="24"></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a data-page="services" href="#">Web Development</a></li>
+            <li><a data-page="services" href="#">Mobile Apps</a></li>
+            <li><a data-page="services" href="#">Product & Graphics Design</a></li>
+            <li><a data-page="services" href="#">Meta & Google Ads</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Gadget Store</h4>
+          <ul>
+            <li><a data-page="shop" href="#">Smartphones</a></li>
+            <li><a data-page="shop" href="#">Smartwatches</a></li>
+            <li><a data-page="shop" href="#">Audio & Earbuds</a></li>
+            <li><a data-page="shop" href="#">Laptops</a></li>
+            <li><a data-page="shop" href="#">E.T.C</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:oriemark32@gmail.com">oriemark32@gmail.com</a></li>
+            <li><a href="tel:+2348134018159">+234 813 401 8159</a></li>
+            <li><a href="https://wa.me/2348134018159" target="_blank" rel="noopener">WhatsApp Us</a></li>
+            <li><a href="#">Mon–Fri 9am–6pm WAT</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 OrieMark Digital Solutions Ltd. All rights reserved.</span>
+        <span>
+          <a href="#">Privacy Policy</a> ·
+          <a href="#">Terms of Service</a> ·
+          <a href="#">Sitemap</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+</main>
+
+
+<!-- ============================================================
+     SERVICES PAGE
+     ============================================================ -->
+<main class="page" id="page-services">
+
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <span class="tag" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.85)">Our Expertise</span>
+      <h1>Services Designed<br>for Real Results</h1>
+      <p>We combine creativity, technology, and strategy to deliver digital solutions that genuinely move the needle for your business.</p>
+    </div>
+  </section>
+
+  <!-- SERVICE DETAILS -->
+  <section class="services-detail">
+    <div class="container">
+
+      <!-- Web Dev -->
+      <div class="service-row reveal">
+        <div class="sr-visual">
+          <div class="sr-big-icon">🌐</div>
+          <div class="sr-tech-tags">
+            <span class="sr-tag">React</span>
+            <span class="sr-tag">Next.js</span>
+            <span class="sr-tag">Node.js</span>
+            <span class="sr-tag">WordPress</span>
+            <span class="sr-tag">Shopify</span>
+          </div>
+        </div>
+        <div class="sr-content">
+          <div class="sr-step">01 — Web Development</div>
+          <h3>Websites That Work as Hard as You Do</h3>
+          <p>We build custom websites and web applications that are fast, beautiful, and optimized for conversion — from simple landing pages to complex e-commerce platforms and SaaS products.</p>
+          <ul class="sr-features">
+            <li>Custom design & full-stack development</li>
+            <li>Mobile-first, responsive layouts</li>
+            <li>SEO architecture & Core Web Vitals optimization</li>
+            <li>CMS integration (WordPress, Webflow, Strapi)</li>
+            <li>E-commerce & payment gateway integration</li>
+            <li>Hosting, SSL setup & ongoing maintenance</li>
+          </ul>
+          <a class="btn btn-primary" href="#" onclick="document.getElementById('chatLauncher').click();return false">Get a Free Quote</a>
+        </div>
+      </div>
+
+      <!-- Mobile Apps -->
+      <div class="service-row reveal" style="direction:rtl">
+        <div class="sr-visual" style="direction:ltr">
+          <div class="sr-big-icon">📱</div>
+          <div class="sr-tech-tags">
+            <span class="sr-tag">Flutter</span>
+            <span class="sr-tag">React Native</span>
+            <span class="sr-tag">iOS</span>
+            <span class="sr-tag">Android</span>
+            <span class="sr-tag">Firebase</span>
+          </div>
+        </div>
+        <div class="sr-content" style="direction:ltr">
+          <div class="sr-step">02 — Mobile App Development</div>
+          <h3>Apps Your Users Will Love Using</h3>
+          <p>From concept to App Store launch — we craft powerful, intuitive mobile applications for iOS and Android using modern cross-platform frameworks that look and feel native.</p>
+          <ul class="sr-features">
+            <li>Cross-platform iOS & Android development</li>
+            <li>UX research, wireframing & UI design included</li>
+            <li>API integration & real-time features</li>
+            <li>Push notifications & analytics</li>
+            <li>App Store & Google Play submission</li>
+            <li>Ongoing support, bug fixes & version updates</li>
+          </ul>
+          <a class="btn btn-primary" href="#" onclick="document.getElementById('chatLauncher').click();return false">Discuss Your App</a>
+        </div>
+      </div>
+
+      <!-- Design -->
+      <div class="service-row reveal">
+        <div class="sr-visual">
+          <div class="sr-big-icon">🎨</div>
+          <div class="sr-tech-tags">
+            <span class="sr-tag">Figma</span>
+            <span class="sr-tag">Illustrator</span>
+            <span class="sr-tag">Photoshop</span>
+            <span class="sr-tag">Canva Pro</span>
+          </div>
+        </div>
+        <div class="sr-content">
+          <div class="sr-step">03 — Product & Graphics Design</div>
+          <h3>Design That Builds Brand Trust</h3>
+          <p>Great design is more than aesthetics — it's communication. We create visual systems that tell your brand's story consistently across every touchpoint, digital and print.</p>
+          <ul class="sr-features">
+            <li>Brand identity, logo design & brand guidelines</li>
+            <li>UI/UX design for web and mobile</li>
+            <li>Social media graphics & content templates</li>
+            <li>Pitch decks, presentations & reports</li>
+            <li>Product packaging & print design</li>
+            <li>Motion graphics & animated assets</li>
+          </ul>
+          <a class="btn btn-primary" href="#" onclick="document.getElementById('chatLauncher').click();return false">Start a Design Project</a>
+        </div>
+      </div>
+
+      <!-- Ads -->
+      <div class="service-row reveal" style="direction:rtl">
+        <div class="sr-visual" style="direction:ltr">
+          <div class="sr-big-icon">📢</div>
+          <div class="sr-tech-tags">
+            <span class="sr-tag">Facebook Ads</span>
+            <span class="sr-tag">Instagram Ads</span>
+            <span class="sr-tag">Google Ads</span>
+            <span class="sr-tag">Analytics</span>
+          </div>
+        </div>
+        <div class="sr-content" style="direction:ltr">
+          <div class="sr-step">04 — Meta & Google Ads</div>
+          <h3>Ads That Drive Real Revenue</h3>
+          <p>Stop wasting budget on guesswork. We build and manage targeted, data-driven ad campaigns on Meta (Facebook/Instagram) and Google that bring actual paying customers to your business.</p>
+          <ul class="sr-features">
+            <li>Full campaign strategy & audience research</li>
+            <li>Ad creative design & compelling copywriting</li>
+            <li>Precise audience targeting & retargeting</li>
+            <li>A/B testing & continuous optimization</li>
+            <li>Conversion tracking & pixel setup</li>
+            <li>Weekly performance reports with KPIs</li>
+          </ul>
+          <a class="btn btn-primary" href="#" onclick="document.getElementById('chatLauncher').click();return false">Grow With Ads</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="tag">Pricing Plans</span>
+        <h2>Transparent, Flexible Pricing</h2>
+        <p>Choose the plan that fits your stage. Every plan includes dedicated support. Custom enterprise quotes available for complex projects.</p>
+      </div>
+      <div class="pricing-grid">
+        <div class="price-card reveal">
+          <div class="pc-tier">Starter</div>
+          <div class="pc-price"><sub>₦</sub>150,000</div>
+          <div class="pc-period">Starting price / project</div>
+          <hr class="pc-divider">
+          <ul class="pc-features">
+            <li><span class="pc-check">✓</span> Up to 5-page website</li>
+            <li><span class="pc-check">✓</span> Mobile-responsive design</li>
+            <li><span class="pc-check">✓</span> Contact form & basic SEO</li>
+            <li><span class="pc-check">✓</span> 1 revision round</li>
+            <li><span class="pc-check">✓</span> 3 months post-launch support</li>
+          </ul>
+          <a class="btn btn-outline" href="#" onclick="document.getElementById('chatLauncher').click();return false" style="width:100%;justify-content:center">Get Started</a>
+        </div>
+
+        <div class="price-card featured reveal">
+          <div class="popular-badge">★ Most Popular</div>
+          <div class="pc-tier">Growth</div>
+          <div class="pc-price"><sub>₦</sub>350,000</div>
+          <div class="pc-period">Starting price / project</div>
+          <hr class="pc-divider">
+          <ul class="pc-features">
+            <li><span class="pc-check">✓</span> Full website + CMS or app</li>
+            <li><span class="pc-check">✓</span> Custom UI/UX design</li>
+            <li><span class="pc-check">✓</span> E-commerce or booking system</li>
+            <li><span class="pc-check">✓</span> SEO, analytics & pixel setup</li>
+            <li><span class="pc-check">✓</span> 3 revision rounds</li>
+            <li><span class="pc-check">✓</span> 6 months priority support</li>
+          </ul>
+          <a class="btn btn-primary" href="#" onclick="document.getElementById('chatLauncher').click();return false" style="width:100%;justify-content:center;background:var(--accent);color:var(--blue-950)">Get Started</a>
+        </div>
+
+        <div class="price-card reveal">
+          <div class="pc-tier">Enterprise</div>
+          <div class="pc-price" style="font-size:30px">Custom</div>
+          <div class="pc-period">Tailored to your scope</div>
+          <hr class="pc-divider">
+          <ul class="pc-features">
+            <li><span class="pc-check">✓</span> Full web + mobile solution</li>
+            <li><span class="pc-check">✓</span> Custom API & integrations</li>
+            <li><span class="pc-check">✓</span> Ongoing ad campaign management</li>
+            <li><span class="pc-check">✓</span> Dedicated project manager</li>
+            <li><span class="pc-check">✓</span> Unlimited revisions</li>
+            <li><span class="pc-check">✓</span> 12 months full support & SLA</li>
+          </ul>
+          <a class="btn btn-outline" href="#" onclick="document.getElementById('chatLauncher').click();return false" style="width:100%;justify-content:center">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-bottom" style="border-top:none;padding-top:0">
+        <span>© 2026 OrieMark Digital Solutions Company</span>
+        <span><a data-page="home" href="#">Home</a> · <a data-page="shop" href="#">Smart Gadgets</a> · <a href="mailto:oriemark32@gmail.com">Contact</a></span>
+      </div>
+    </div>
+  </footer>
+</main>
+
+
+<!-- ============================================================
+     SHOP PAGE
+     ============================================================ -->
+<main class="page" id="page-shop">
+
+  <section class="shop-hero">
+    <div class="shop-hero-inner">
+      <span class="tag">Smart Gadgets Store</span>
+      <h1>Premium Gadgets,<br>Nigerian Prices</h1>
+      <p>Smartphones, smartwatches, audio gear, laptops and accessories — curated for quality, delivered to your doorstep.</p>
+    </div>
+  </section>
+
+  <!-- Toolbar -->
+  <div class="shop-toolbar" role="search">
+    <div class="shop-toolbar-inner">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input
+          type="search"
+          id="shopSearch"
+          placeholder="Search phones, earbuds, laptops..."
+          aria-label="Search products"
+          autocomplete="off"
+        >
+      </div>
+      <div class="filter-row" role="group" aria-label="Filter by category">
+        <button class="filter-chip active" data-cat="All">All</button>
+        <button class="filter-chip" data-cat="Smartphones">📱 Phones</button>
+        <button class="filter-chip" data-cat="Smartwatches">⌚ Watches</button>
+        <button class="filter-chip" data-cat="Audio">🎧 Audio</button>
+        <button class="filter-chip" data-cat="Laptops">💻 Laptops</button>
+        <button class="filter-chip" data-cat="Accessories">🔌 Accessories</button>
+        <button class="filter-chip" data-cat="Cameras">📷 Cameras</button>
+        <button class="filter-chip" data-cat="Children's Toys">🧸 Children's Toys</button>
+
+      </div>
+      <select id="shopSort" aria-label="Sort products">
+        <option value="default">Sort: Default</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="rating">Top Rated</option>
+        <option value="name">Name A–Z</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Products -->
+  <div class="shop-body">
+    <div class="shop-meta">
+      <p class="shop-count" id="shopCount" aria-live="polite">Loading products...</p>
+    </div>
+    <div class="products-grid" id="productsGrid" role="list" aria-label="Product listings"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-bottom" style="border-top:none;padding-top:0">
+        <span>© 2026 OrieMark Digital Solutions Company · Fast Delivery Across Nigeria 🚚</span>
+        <span><a data-page="home" href="#">Home</a> · <a data-page="services" href="#">Services</a></span>
+      </div>
+    </div>
+  </footer>
+</main>
+
+
+<!-- ============================================================
+     CHATBOT
+     ============================================================ -->
+<div class="chat-window hidden" id="chatWindow" role="dialog" aria-label="Chat with OrieMark Assistant" aria-modal="true">
+  <div class="chat-header">
+    <div class="chat-avatar">🤖</div>
+    <div>
+      <div class="chat-title">Orie — OrieMark Assistant</div>
+      <div class="chat-status-text"><div class="status-dot"></div> Online · Powered by AI</div>
+    </div>
+    <button class="chat-close" id="chatClose" aria-label="Close chat">✕</button>
+  </div>
+
+  <div class="chat-body" id="chatBody" role="log" aria-live="polite">
+    <div class="msg bot">👋 Hi! I'm Orie, your OrieMark AI assistant. I can help with services, pricing, gadgets, or anything else. How can I help you today?</div>
+  </div>
+
+  <div class="chat-quick" id="quickReplies" aria-label="Quick reply options">
+    <button class="quick-reply">Our Services</button>
+    <button class="quick-reply">Get a Quote</button>
+    <button class="quick-reply">Buy a Gadget</button>
+    <button class="quick-reply">Contact Info</button>
+  </div>
+
+  <div class="chat-input-bar">
+    <input class="chat-input" id="chatInput" type="text" placeholder="Ask me anything..." aria-label="Chat message" maxlength="500">
+    <button class="chat-send" id="chatSend" aria-label="Send message">
+      <svg viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+    </button>
+  </div>
+</div>
+
+<button class="chat-launcher" id="chatLauncher" aria-label="Open chat assistant" aria-expanded="false">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+  </svg>
+</button>
+
+<!-- Scripts -->
+<script src="js/products.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
