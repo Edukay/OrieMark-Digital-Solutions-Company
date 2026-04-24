@@ -36,7 +36,7 @@
 
     <!-- Right actions -->
     <div class="nav-right">
-      <button class="cart-btn" aria-label="Shopping cart" onclick="showPage('shop')">
+      <button class="cart-btn" aria-label="Shopping cart" onclick="goToCheckout()">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
           <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
@@ -45,6 +45,12 @@
         <span class="cart-count" aria-live="polite">0</span>
       </button>
       <a class="btn btn-primary btn-sm" data-page="services" href="#">Get Started</a>
+      <button class="auth-btn" id="authBtn" aria-label="Sign in or Sign up">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span>Sign In</span>
+      </button>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -646,6 +652,294 @@
 
 
 <!-- ============================================================
+     CHECKOUT PAGE
+     ============================================================ -->
+<main class="page" id="page-checkout">
+
+  <section class="checkout-hero">
+    <div class="checkout-hero-inner">
+      <span class="tag" style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.85)">Secure Checkout</span>
+      <h1>Complete Your Order</h1>
+      <p>Review your items, choose your payment method, and we'll deliver to your doorstep.</p>
+    </div>
+  </section>
+
+  <div class="checkout-body">
+    <div class="checkout-grid">
+      <!-- Left Column: Forms -->
+      <div class="checkout-forms">
+        
+        <!-- Contact Info -->
+        <div class="checkout-section">
+          <h2><span class="cs-number">1</span> Contact Information</h2>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="checkoutFirstName">First Name *</label>
+              <input type="text" id="checkoutFirstName" name="firstName" placeholder="Chinedu" required>
+            </div>
+            <div class="form-group">
+              <label for="checkoutLastName">Last Name *</label>
+              <input type="text" id="checkoutLastName" name="lastName" placeholder="Madu" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="checkoutEmail">Email Address *</label>
+            <input type="email" id="checkoutEmail" name="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="checkoutPhone">Phone Number *</label>
+            <input type="tel" id="checkoutPhone" name="phone" placeholder="+234 800 000 0000" required>
+          </div>
+        </div>
+
+        <!-- Shipping Address -->
+        <div class="checkout-section">
+          <h2><span class="cs-number">2</span> Shipping Address</h2>
+          <div class="form-group">
+            <label for="checkoutAddress">Street Address *</label>
+            <input type="text" id="checkoutAddress" name="address" placeholder="123 Main Street, Apt 4" required>
+          </div>
+          <div class="form-group">
+            <label for="checkoutCity">City *</label>
+            <input type="text" id="checkoutCity" name="city" placeholder="Lagos" required>
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label for="checkoutState">State *</label>
+              <select id="checkoutState" name="state" required>
+                <option value="">Select State</option>
+                <option value="Abia">Abia</option>
+                <option value="Abuja">Abuja (FCT)</option>
+                <option value="Adamawa">Adamawa</option>
+                <option value="Akwa Ibom">Akwa Ibom</option>
+                <option value="Anambra">Anambra</option>
+                <option value="Bauchi">Bauchi</option>
+                <option value="Bayelsa">Bayelsa</option>
+                <option value="Benue">Benue</option>
+                <option value="Borno">Borno</option>
+                <option value="Cross River">Cross River</option>
+                <option value="Delta">Delta</option>
+                <option value="Ebonyi">Ebonyi</option>
+                <option value="Edo">Edo</option>
+                <option value="Ekiti">Ekiti</option>
+                <option value="Enugu">Enugu</option>
+                <option value="Gombe">Gombe</option>
+                <option value="Imo">Imo</option>
+                <option value="Jigawa">Jigawa</option>
+                <option value="Kaduna">Kaduna</option>
+                <option value="Kano">Kano</option>
+                <option value="Katsina">Katsina</option>
+                <option value="Kebbi">Kebbi</option>
+                <option value="Kogi">Kogi</option>
+                <option value="Kwara">Kwara</option>
+                <option value="Lagos">Lagos</option>
+                <option value="Nasarawa">Nasarawa</option>
+                <option value="Niger">Niger</option>
+                <option value="Ogun">Ogun</option>
+                <option value="Ondo">Ondo</option>
+                <option value="Osun">Osun</option>
+                <option value="Oyo">Oyo</option>
+                <option value="Plateau">Plateau</option>
+                <option value="Rivers">Rivers</option>
+                <option value="Sokoto">Sokoto</option>
+                <option value="Taraba">Taraba</option>
+                <option value="Yobe">Yobe</option>
+                <option value="Zamfara">Zamfara</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="checkoutZip">Postal Code</label>
+              <input type="text" id="checkoutZip" name="zip" placeholder="100001">
+            </div>
+          </div>
+        </div>
+
+        <!-- Payment Method -->
+        <div class="checkout-section">
+          <h2><span class="cs-number">3</span> Payment Method</h2>
+          <p class="checkout-section-desc">Choose how you'd like to pay for your order</p>
+          
+          <div class="payment-options">
+            <label class="payment-option active" data-method="card">
+              <input type="radio" name="paymentMethod" value="card" checked>
+              <div class="po-icon">💳</div>
+              <div class="po-content">
+                <div class="po-title">Debit/Credit Card</div>
+                <div class="po-desc">Pay with Visa, Mastercard, or Verve</div>
+              </div>
+              <div class="po-check">✓</div>
+            </label>
+            
+            <label class="payment-option" data-method="transfer">
+              <input type="radio" name="paymentMethod" value="transfer">
+              <div class="po-icon">🏦</div>
+              <div class="po-content">
+                <div class="po-title">Bank Transfer</div>
+                <div class="po-desc">Transfer directly to our bank account</div>
+              </div>
+              <div class="po-check">✓</div>
+            </label>
+            
+            <label class="payment-option" data-method="cod">
+              <input type="radio" name="paymentMethod" value="cod">
+              <div class="po-icon">💵</div>
+              <div class="po-content">
+                <div class="po-title">Cash on Delivery</div>
+                <div class="po-desc">Pay when you receive your order</div>
+              </div>
+              <div class="po-check">✓</div>
+            </label>
+            
+            <!-- <label class="payment-option" data-method="ussd">
+              <input type="radio" name="paymentMethod" value="ussd">
+              <div class="po-icon">📱</div>
+              <div class="po-content">
+                <div class="po-title">USSD Payment</div>
+                <div class="po-desc">Pay via *770# on your mobile</div>
+              </div>
+              <div class="po-check">✓</div>
+            </label>
+          </div>
+
+          <!-- Card Details (shown when card is selected) -->
+          <div class="payment-details" id="cardDetails">
+            <div class="form-group">
+              <label for="cardNumber">Card Number *</label>
+              <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+            </div>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="cardExpiry">Expiry Date *</label>
+                <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/YY" maxlength="5">
+              </div>
+              <div class="form-group">
+                <label for="cardCvv">CVV *</label>
+                <input type="text" id="cardCvv" name="cardCvv" placeholder="123" maxlength="4">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cardName">Cardholder Name *</label>
+              <input type="text" id="cardName" name="cardName" placeholder="JOHN DOE">
+            </div>
+          </div>
+
+          <!-- Bank Transfer Info (shown when transfer is selected) -->
+          <div class="payment-details hidden" id="transferDetails">
+            <div class="bank-info">
+              <div class="bi-title">Bank Transfer Details</div>
+              <div class="bi-row">
+                <span class="bi-label">Bank Name:</span>
+                <span class="bi-value">Guaranty Trust Bank (GTB)</span>
+              </div>
+              <div class="bi-row">
+                <span class="bi-label">Account Name:</span>
+                <span class="bi-value">OrieMark Digital Solutions</span>
+              </div>
+              <div class="bi-row">
+                <span class="bi-label">Account Number:</span>
+                <span class="bi-value" id="transferAccount">058-291-0831</span>
+                <button type="button" class="copy-btn" onclick="navigator.clipboard.writeText('0582910831')">📋 Copy</button>
+              </div>
+              <div class="bi-note">💡 Please use your email or phone number as payment reference</div>
+            </div>
+          </div>
+
+          <!-- USSD Info (shown when USSD is selected) -->
+          <!--<div class="payment-details hidden" id="ussdDetails">
+            <div class="ussd-info">
+              <div class="ui-title">USSD Payment Instructions</div>
+              <p>Dial <strong>*770*0582910831#</strong> on your mobile phone to initiate payment.</p>
+              <p class="ui-note">You will receive a confirmation SMS after successful payment.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Order Notes -->
+        <div class="checkout-section">
+          <h2><span class="cs-number">4</span> Additional Notes</h2>
+          <div class="form-group">
+            <label for="checkoutNotes">Order Notes (Optional)</label>
+            <textarea id="checkoutNotes" name="notes" rows="3" placeholder="Any special instructions for delivery..."></textarea>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Order Summary -->
+      <div class="checkout-summary">
+        <div class="summary-card">
+          <h3>Order Summary</h3>
+          
+          <!-- Cart Items -->
+          <div class="summary-items" id="checkoutItems">
+            <!-- Populated by JS -->
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <!-- Totals -->
+          <div class="summary-totals">
+            <div class="st-row">
+              <span>Subtotal</span>
+              <span id="checkoutSubtotal">₦0</span>
+            </div>
+            <div class="st-row">
+              <span>Shipping</span>
+              <span id="checkoutShipping">Calculated at next step</span>
+            </div>
+            <div class="st-row">
+              <span>Tax (VAT 7.5%)</span>
+              <span id="checkoutTax">₦0</span>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="st-row total">
+              <span>Total</span>
+              <span id="checkoutTotal">₦0</span>
+            </div>
+          </div>
+
+          <!-- Promo Code -->
+          <div class="promo-section">
+            <div class="promo-input">
+              <input type="text" id="promoCode" placeholder="Promo code">
+              <button type="button" id="applyPromo">Apply</button>
+            </div>
+            <div class="promo-message" id="promoMessage"></div>
+          </div>
+
+          <!-- Place Order Button -->
+          <button type="button" class="btn btn-primary btn-lg btn-full" id="placeOrderBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+            Place Order — <span id="btnTotal">₦0</span>
+          </button>
+
+          <!-- Security Note -->
+          <div class="secure-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            Secure checkout — Your data is encrypted
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-bottom" style="border-top:none;padding-top:0">
+        <span>© 2026 OrieMark Digital Solutions Company · Fast Delivery Across Nigeria 🚚</span>
+        <span><a data-page="home" href="#">Home</a> · <a data-page="services" href="#">Services</a></span>
+      </div>
+    </div>
+  </footer>
+</main>
+
+
+<!-- ============================================================
      CHATBOT
      ============================================================ -->
 <div class="chat-window hidden" id="chatWindow" role="dialog" aria-label="Chat with OrieMark Assistant" aria-modal="true">
@@ -703,6 +997,121 @@
           <button class="wishlist-btn" id="modalWishlist">♡</button>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     AUTH MODAL — Sign In / Sign Up
+     ============================================================ -->
+<div class="auth-modal" id="authModal" role="dialog" aria-labelledby="authTitle" aria-modal="true">
+  <div class="auth-backdrop" id="authBackdrop"></div>
+  <div class="auth-container">
+    <button class="auth-close" id="authClose" aria-label="Close modal">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <!-- Tabs -->
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="signin">Sign In</button>
+      <button class="auth-tab" data-tab="signup">Sign Up</button>
+    </div>
+
+    <!-- Sign In Form -->
+    <form class="auth-form active" id="signinForm" autocomplete="on">
+      <h2 id="authTitle">Welcome Back</h2>
+      <p class="auth-subtitle">Sign in to access your account</p>
+      
+      <div class="form-group">
+        <label for="signinEmail">Email Address</label>
+        <input type="email" id="signinEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+      </div>
+      
+      <div class="form-group">
+        <label for="signinPassword">Password</label>
+        <input type="password" id="signinPassword" name="password" placeholder="Enter your password" required autocomplete="current-password">
+      </div>
+      
+      <div class="form-row">
+        <label class="checkbox-label">
+          <input type="checkbox" name="remember">
+          <span class="checkmark"></span>
+          Remember me
+        </label>
+        <a href="#" class="auth-link" id="forgotPassword">Forgot password?</a>
+      </div>
+      
+      <button type="submit" class="btn btn-primary btn-full">
+        Sign In
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      </button>
+      
+      <p class="auth-footer-text">
+        Don't have an account? <button type="button" class="auth-link-btn" data-switch="signup">Sign up</button>
+      </p>
+    </form>
+
+    <!-- Sign Up Form -->
+    <form class="auth-form" id="signupForm" autocomplete="on">
+      <h2>Create Account</h2>
+      <p class="auth-subtitle">Join OrieMark for exclusive updates and offers</p>
+      
+      <div class="form-group">
+        <label for="signupName">Full Name</label>
+        <input type="text" id="signupName" name="name" placeholder="John Doe" required autocomplete="name">
+      </div>
+      
+      <div class="form-group">
+        <label for="signupEmail">Email Address</label>
+        <input type="email" id="signupEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+        <span class="form-hint">We'll send you updates about our services and promotions</span>
+      </div>
+      
+      <div class="form-group">
+        <label for="signupPhone">Phone Number (Optional)</label>
+        <input type="tel" id="signupPhone" name="phone" placeholder="+234 800 000 0000" autocomplete="tel">
+      </div>
+      
+      <div class="form-group">
+        <label for="signupPassword">Create Password</label>
+        <input type="password" id="signupPassword" name="password" placeholder="Min. 8 characters" required minlength="8" autocomplete="new-password">
+      </div>
+      
+      <div class="form-group">
+        <label for="signupConfirm">Confirm Password</label>
+        <input type="password" id="signupConfirm" name="confirmPassword" placeholder="Re-enter password" required minlength="8" autocomplete="new-password">
+      </div>
+      
+      <label class="checkbox-label">
+        <input type="checkbox" name="newsletter" checked>
+        <span class="checkmark"></span>
+        Send me email updates about new services and products
+      </label>
+      
+      <label class="checkbox-label">
+        <input type="checkbox" name="terms" required>
+        <span class="checkmark"></span>
+        I agree to the <a href="#" class="auth-link">Terms of Service</a> and <a href="#" class="auth-link">Privacy Policy</a>
+      </label>
+      
+      <button type="submit" class="btn btn-primary btn-full">
+        Create Account
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      </button>
+      
+      <p class="auth-footer-text">
+        Already have an account? <button type="button" class="auth-link-btn" data-switch="signin">Sign in</button>
+      </p>
+    </form>
+
+    <!-- Success Message -->
+    <div class="auth-success" id="authSuccess">
+      <div class="success-icon">
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <h2>Welcome aboard!</h2>
+      <p id="successMessage">Your account has been created successfully.</p>
+      <button type="button" class="btn btn-primary btn-full" id="authSuccessClose">Continue</button>
     </div>
   </div>
 </div>
