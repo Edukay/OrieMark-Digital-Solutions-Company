@@ -273,6 +273,14 @@ function renderProducts() {
       toggleWishlist(+btn.dataset.id, btn);
     });
   });
+
+  // Product card click to open modal
+  $$('.product-card', grid).forEach(card => {
+    card.addEventListener('click', () => {
+      const productId = +card.dataset.id;
+      openProductModal(productId);
+    });
+  });
 }
 
 function buildProductCard(p) {
@@ -288,7 +296,7 @@ function buildProductCard(p) {
     : '';
 
   return `
-    <div class="product-card card-fade-in">
+    <div class="product-card card-fade-in" data-id="${p.id}">
       <div class="product-img">
         ${badge}
         <button class="wishlist-btn" data-id="${p.id}">♡</button>
@@ -344,6 +352,145 @@ function initShopControls() {
     state.shopSort = e.target.value;
     renderProducts();
   });
+}
+
+// ============================================
+// PRODUCT MODAL
+// ============================================
+function initProductModal() {
+  const modal = $('#productModal');
+  const overlay = $('#modalOverlay');
+  const closeBtn = $('#modalClose');
+  const addToCartBtn = $('#modalAddToCart');
+  const wishlistBtn = $('#modalWishlist');
+
+  if (!modal) return;
+
+  // Close handlers
+  closeBtn?.addEventListener('click', closeModal);
+  overlay?.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) {
+      closeModal();
+    }
+  });
+
+  // Add to cart from modal
+  addToCartBtn?.addEventListener('click', () => {
+    const productId = +addToCartBtn.dataset.id;
+    addToCart(productId, addToCartBtn);
+  });
+
+  // Wishlist from modal
+  wishlistBtn?.addEventListener('click', () => {
+    const productId = +wishlistBtn.dataset.id;
+    toggleWishlist(productId, wishlistBtn);
+  });
+}
+
+function openProductModal(productId) {
+  const product = PRODUCTS.find(p => p.id === productId);
+  if (!product) return;
+
+  const modal = $('#productModal');
+  if (!modal) return;
+
+  // Populate modal content
+  const modalImage = $('#modalImage');
+  const modalCategory = $('#modalCategory');
+  const modalName = $('#modalProductName');
+  const modalRating = $('#modalRating');
+  const modalPrice = $('#modalPrice');
+  const modalTags = $('#modalTags');
+  const modalDescription = $('#modalDescription');
+  const modalSpecs = $('#modalSpecs');
+  const addToCartBtn = $('#modalAddToCart');
+  const wishlistBtn = $('#modalWishlist');
+
+  // Image
+  if (product.Image) {
+    modalImage.innerHTML = product.Image;
+  } else if (product.emoji) {
+    modalImage.innerHTML = `<span class="emoji">${product.emoji}</span>`;
+  }
+
+  // Basic info
+  modalCategory.textContent = product.category;
+  modalName.textContent = product.name;
+
+  // Rating
+  const stars = buildStars(product.rating);
+  modalRating.innerHTML = `<span class="stars">${stars}</span> <span>${product.rating} (${product.reviews} reviews)</span>`;
+
+  // Price
+  const oldPrice = product.oldPrice ? `<span class="old">₦${product.oldPrice.toLocaleString()}</span>` : '';
+  modalPrice.innerHTML = `<span class="current">₦${product.price.toLocaleString()}</span>${oldPrice}`;
+
+  // Tags
+  modalTags.innerHTML = product.tags.map(tag => `<span>${tag}</span>`).join('');
+
+  // Description
+  modalDescription.textContent = product.description;
+
+  // Specifications
+  if (product.specs) {
+    const specsHtml = buildSpecsHTML(product.specs);
+    modalSpecs.innerHTML = specsHtml;
+  } else {
+    modalSpecs.innerHTML = '';
+  }
+
+  // Update button states
+  addToCartBtn.dataset.id = product.id;
+  addToCartBtn.disabled = !product.inStock;
+  addToCartBtn.textContent = product.inStock ? 'Add to Cart' : 'Out of Stock';
+  addToCartBtn.style.opacity = product.inStock ? '1' : '0.4';
+  addToCartBtn.style.cursor = product.inStock ? 'pointer' : 'not-allowed';
+
+  wishlistBtn.dataset.id = product.id;
+  if (state.wishlist.has(product.id)) {
+    wishlistBtn.classList.add('active');
+    wishlistBtn.textContent = '♥';
+  } else {
+    wishlistBtn.classList.remove('active');
+    wishlistBtn.textContent = '♡';
+  }
+
+  // Show modal
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  const modal = $('#productModal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function buildSpecsHTML(specs) {
+  let html = '<h4>Specifications</h4><div class="product-modal-specs-grid">';
+  
+  for (const [key, value] of Object.entries(specs)) {
+    const label = key.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+    
+    if (Array.isArray(value)) {
+      html += `
+        <div class="spec-item">
+          <span class="spec-label">${label}</span>
+          <span class="spec-value">${value.join(', ')}</span>
+        </div>`;
+    } else {
+      html += `
+        <div class="spec-item">
+          <span class="spec-label">${label}</span>
+          <span class="spec-value">${value}</span>
+        </div>`;
+    }
+  }
+  
+  html += '</div>';
+  return html;
 }
 
 // ============================================
@@ -495,6 +642,7 @@ function getChatIcon() {
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initShopControls();
+  initProductModal();
   initChatbot();
   renderProducts();
   initReveal();

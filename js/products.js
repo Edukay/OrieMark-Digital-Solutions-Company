@@ -13,12 +13,24 @@ const PRODUCTS = [
     oldPrice: 950000,
     rating: 4.9,
     reviews: 312,
-    Image: "<img src='/Images/Products_Images/Phones/SAMSUNG GALAXY S24.jpg' alt='Samsung Galaxy S24 Ultra' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Phones/SAMSUNG GALAXY S24.jpg' alt='Samsung Galaxy S24 Ultra' class='product-image'>",
     badge: "sale",
     tags: ["5G", "200MP Camera", "S-Pen", "AI Features"],
     description: "The ultimate Samsung flagship with a 200MP camera, built-in S-Pen, and powerful Snapdragon 8 Gen 3 processor.",
     inStock: true,
-    featured: true
+    featured: true,
+    specs: {
+      display: "6.8\" QHD+ Dynamic AMOLED 2X, 120Hz",
+      processor: "Snapdragon 8 Gen 3",
+      ram: "12GB",
+      storage: "256GB / 512GB / 1TB",
+      camera: "200MP Main + 50MP Periscope + 12MP Ultra + 10MP",
+      battery: "5000mAh, 45W Fast Charging",
+      os: "Android 14, One UI 6.1",
+      connectivity: "5G, WiFi 6E, Bluetooth 5.3, NFC",
+      weight: "232g",
+      colors: ["Titanium Black", "Titanium Gray", "Titanium Violet"]
+    }
   },
   {
     id: 2,
@@ -28,12 +40,24 @@ const PRODUCTS = [
     oldPrice: null,
     rating: 4.8,
     reviews: 245,
-    Image: "<img src='/Images/Products_Images/Phones/IPHONE 15 PRO MAX.webp' alt='iPhone 15 Pro Max' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Phones/IPHONE 15 PRO MAX.webp' alt='iPhone 15 Pro Max' class='product-image'>",
     badge: "new",
     tags: ["A17 Pro", "Titanium", "USB-C", "48MP"],
     description: "Apple's most powerful iPhone with titanium design, A17 Pro chip, and a 48MP Main camera with 5x optical zoom.",
     inStock: true,
-    featured: true
+    featured: true,
+    specs: {
+      display: "6.7\" Super Retina XDR OLED, 120Hz",
+      processor: "A17 Pro chip",
+      ram: "8GB",
+      storage: "256GB / 512GB / 1TB",
+      camera: "48MP Main + 12MP Ultra + 12MP Telephoto",
+      battery: "4422mAh, 20W Fast Charging",
+      os: "iOS 17",
+      connectivity: "5G, WiFi 6E, Bluetooth 5.3, USB-C",
+      weight: "221g",
+      colors: ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"]
+    }
   },
   {
     id: 3,
@@ -44,12 +68,24 @@ const PRODUCTS = [
     rating: 4.5,
     reviews: 89,
     emoji: "📱",
-    Image: "<img src='/Images/Products_Images/Phones/Tecno Phantom X2 Pro.png' alt='Tecno Phantom X2 Pro' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Phones/Tecno Phantom X2 Pro.png' alt='Tecno Phantom X2 Pro' class='product-image'>",
     badge: "sale",
     tags: ["5G", "64MP", "Pop-Up Camera"],
     description: "Tecno's flagship with a retractable portrait lens, 6.8-inch AMOLED display, and all-day battery life.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      display: "6.8\" FHD+ AMOLED, 120Hz",
+      processor: "MediaTek Dimensity 9000",
+      ram: "8GB",
+      storage: "256GB",
+      camera: "64MP Main + 13MP Ultra + 2MP",
+      battery: "5160mAh, 45W Fast Charging",
+      os: "HiOS 13 (Android 13)",
+      connectivity: "5G, WiFi 6, Bluetooth 5.3",
+      weight: "210g",
+      colors: ["Moonlight Silver", "Stardust Gray"]
+    }
   },
   {
     id: 4,
@@ -60,12 +96,24 @@ const PRODUCTS = [
     rating: 4.7,
     reviews: 132,
     emoji: "📱",
-    Image: "<img src='/Images/Products_Images/Phones/Google Pixel 8 Pro.png' alt='Google Pixel 8 Pro' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Phones/Google Pixel 8 Pro.png' alt='Google Pixel 8 Pro' class='product-image'>",
     badge: null,
     tags: ["AI Camera", "Tensor G3", "7 yrs updates"],
     description: "Pure Android experience with Tensor G3 chip, best-in-class computational photography, and 7 years of OS updates.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      display: "6.7\" LTPO OLED, 120Hz",
+      processor: "Google Tensor G3",
+      ram: "12GB",
+      storage: "128GB / 256GB / 512GB",
+      camera: "50MP Main + 48MP Ultra + 48MP Telephoto",
+      battery: "5050mAh, 30W Fast Charging",
+      os: "Android 14 (7 years updates)",
+      connectivity: "5G, WiFi 7, Bluetooth 5.3, NFC",
+      weight: "213g",
+      colors: ["Obsidian", "Porcelain", "Bay"]
+    }
   },
   {
     id: 5,
@@ -76,12 +124,24 @@ const PRODUCTS = [
     rating: 4.4,
     reviews: 76,
     emoji: "📱",
-    Image: "<img src='/Images/Products_Images/Phones/Infinix Zero 30 5G.png' alt='Infinix Zero 30 5G' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Phones/Infinix Zero 30 5G.png' alt='Infinix Zero 30 5G' class='product-image'>",
     badge: "sale",
     tags: ["5G", "144Hz AMOLED", "108MP"],
     description: "Budget flagship with a 108MP camera, 144Hz curved AMOLED screen, and 5G connectivity at an unbeatable price.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      display: "6.78\" FHD+ AMOLED, 144Hz",
+      processor: "MediaTek Dimensity 8020",
+      ram: "8GB / 12GB",
+      storage: "256GB",
+      camera: "108MP Main + 13MP Ultra + 2MP",
+      battery: "5000mAh, 68W Fast Charging",
+      os: "XOS 13 (Android 13)",
+      connectivity: "5G, WiFi 6, Bluetooth 5.2",
+      weight: "185g",
+      colors: ["Golden Hour", "Racing Grey", "Misty Green"]
+    }
   },
 
   // ---- SMARTWATCHES ----
@@ -94,12 +154,23 @@ const PRODUCTS = [
     rating: 4.9,
     reviews: 198,
     emoji: "⌚",
-    Image: "<img src='/Images/Products_Images/Watches/Apple Watch Series 9.png' alt='Apple Watch Series 9' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Watches/Apple Watch Series 9.png' alt='Apple Watch Series 9' class='product-image'>",
     badge: "sale",
     tags: ["Always-On", "ECG", "S9 Chip", "GPS"],
     description: "The smartest Apple Watch yet with the new S9 chip, brighter display, and the revolutionary Double Tap gesture.",
     inStock: true,
-    featured: true
+    featured: true,
+    specs: {
+      display: "Always-On Retina OLED, 2000 nits",
+      processor: "S9 SiP with 64-bit dual-core",
+      storage: "64GB",
+      battery: "18 hours, Magnetic Fast Charger",
+      sensors: ["HR", "ECG", "SpO2", "Temp", "Accelerometer"],
+      waterResistance: "50m",
+      connectivity: "GPS, WiFi 4, Bluetooth 5.3, NFC",
+      caseSize: "45mm / 41mm",
+      colors: ["Midnight", "Starlight", "Silver", "Pink", "Red"]
+    }
   },
   {
     id: 7,
@@ -110,12 +181,23 @@ const PRODUCTS = [
     rating: 4.6,
     reviews: 144,
     emoji: "⌚",
-    Image: "<img src='/Images/Products_Images/Watches/Samsung Galaxy Watch 6 Classic.png' alt='Samsung Galaxy Watch 6 Classic' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Watches/Samsung Galaxy Watch 6 Classic.png' alt='Samsung Galaxy Watch 6 Classic' class='product-image'>",
     badge: null,
     tags: ["Rotating Bezel", "BioActive", "Sapphire Glass"],
     description: "Premium smartwatch with iconic rotating bezel, comprehensive health sensors, and premium sapphire crystal glass.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      display: "Super AMOLED, 60Hz, 2000 nits",
+      processor: "Exynos W930",
+      storage: "16GB",
+      battery: "40 hours",
+      sensors: ["HR", "ECG", "BP", "SpO2", "Temp"],
+      waterResistance: "50m (IP68)",
+      connectivity: "GPS, WiFi 2.4GHz, Bluetooth 5.3, NFC",
+      caseSize: "47mm / 43mm",
+      colors: ["Black", "Silver"]
+    }
   },
   {
     id: 8,
@@ -126,12 +208,23 @@ const PRODUCTS = [
     rating: 4.7,
     reviews: 77,
     emoji: "⌚",
-    Image: "<img src='/Images/Products_Images/Watches/Garmin Forerunner 265.png' alt='Garmin Forerunner 265' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Watches/Garmin Forerunner 265.png' alt='Garmin Forerunner 265' class='product-image'>",
     badge: "new",
     tags: ["AMOLED", "Training Readiness", "GPS"],
     description: "Garmin's top running watch with AMOLED display, advanced training analytics, and up to 15 days battery life.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      display: "1.3\" AMOLED, Always-on",
+      processor: "Garmin Elevate 5",
+      storage: "8GB",
+      battery: "15 days (smartwatch), 24 hours (GPS)",
+      sensors: ["HR", "Pulse Ox", "GPS", "GLONASS", "Galileo"],
+      waterResistance: "5 ATM",
+      connectivity: "Bluetooth, ANT+, WiFi",
+      caseSize: "46mm",
+      colors: ["Black/Black", "White/White", "Magenta"]
+    }
   },
   {
     id: 9,
@@ -142,12 +235,23 @@ const PRODUCTS = [
     rating: 4.5,
     reviews: 91,
     emoji: "⌚",
-    Image: "<img src='/Images/Products_Images/Watches/Huawei Watch GT 4.png' alt='Huawei Watch GT 4' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Watches/Huawei Watch GT 4.png' alt='Huawei Watch GT 4' class='product-image'>",
     badge: "sale",
     tags: ["2-Week Battery", "ECG", "SpO2"],
     description: "Elegant smartwatch with exceptional 2-week battery life, precise health monitoring, and premium octagonal design.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      display: "1.43\" AMOLED, 466x466",
+      processor: "Kirin A1",
+      storage: "4GB",
+      battery: "14 days (typical), 8 days (heavy)",
+      sensors: ["HR", "SpO2", "ECG", "Accelerometer", "Gyro"],
+      waterResistance: "5 ATM",
+      connectivity: "Bluetooth 5.2, NFC",
+      caseSize: "46mm / 41mm",
+      colors: ["Silver", "Black", "Gold", "Green"]
+    }
   },
 
   // ---- AUDIO ----
@@ -160,12 +264,22 @@ const PRODUCTS = [
     rating: 4.8,
     reviews: 421,
     emoji: "🎧",
-    Image: "<img src='/Images/Products_Images/Audios/AirPods Pro (2nd Gen).png' alt='AirPods Pro (2nd Gen)' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Audios/AirPods Pro (2nd Gen).png' alt='AirPods Pro (2nd Gen)' class='product-image'>",
     badge: "sale",
     tags: ["ANC", "Spatial Audio", "H2 Chip"],
     description: "Apple's best earbuds with up to 2x more active noise cancellation, Adaptive Audio, and Conversation Awareness.",
     inStock: true,
-    featured: true
+    featured: true,
+    specs: {
+      driver: "Custom Apple H2 chip",
+      anc: "Active Noise Cancellation & Adaptive Transparency",
+      battery: "6h listening, 30h with case",
+      charging: "MagSafe, Wireless, Lightning",
+      connectivity: "Bluetooth 5.3",
+      features: ["Spatial Audio", "Adaptive Audio", "Conversation Awareness", "Find My"],
+      waterResistance: "IP54",
+      weight: "5.3g per bud"
+    }
   },
   {
     id: 11,
@@ -176,12 +290,22 @@ const PRODUCTS = [
     rating: 4.9,
     reviews: 356,
     emoji: "🎧",
-    Image: "<img src='/Images/Products_Images/Audios/Sony WH-1000XM5.png' alt='Sony WH-1000XM5' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Audios/Sony WH-1000XM5.png' alt='Sony WH-1000XM5' class='product-image'>",
     badge: "hot",
     tags: ["Industry-leading ANC", "30hr battery", "LDAC"],
     description: "The gold standard in wireless noise-canceling headphones with 8 microphones, 30-hour battery, and ultra-premium sound.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      driver: "30mm Dynamic Driver",
+      anc: "Industry-leading ANC with Auto NC Optimizer",
+      battery: "30 hours (ANC on), 40 hours (ANC off)",
+      charging: "USB-C, 3 min = 3h",
+      connectivity: "Bluetooth 5.2, 3.5mm jack, USB-C",
+      features: ["LDAC", "DSEE Extreme", "Multipoint", "Speak-to-Chat"],
+      weight: "250g",
+      colors: ["Black", "Silver"]
+    }
   },
   {
     id: 12,
@@ -192,12 +316,22 @@ const PRODUCTS = [
     rating: 4.6,
     reviews: 203,
     emoji: "🔊",
-    Image: "<img src='/Images/Products_Images/Audios/JBL Charge 5.png' alt='JBL Charge 5' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Audios/JBL Charge 5.png' alt='JBL Charge 5' class='product-image'>",
     badge: "sale",
     tags: ["IP67 Waterproof", "20hr Playtime", "PowerBank"],
     description: "Portable Bluetooth speaker with IP67 waterproofing, massive 7500mAh battery that can charge your devices.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      driver: "52mm x 52mm racetrack driver",
+      output: "40W RMS",
+      battery: "7500mAh, 20 hours playtime",
+      charging: "USB-C",
+      connectivity: "Bluetooth 5.1",
+      features: ["JBL PartyBoost", "PowerBank function", "IP67 waterproof"],
+      weight: "960g",
+      colors: ["Black", "Blue", "Gray", "Red", "Teal"]
+    }
   },
   {
     id: 13,
@@ -208,12 +342,22 @@ const PRODUCTS = [
     rating: 4.5,
     reviews: 167,
     emoji: "🎧",
-    Image: "<img src='/Images/Products_Images/Audios/Samsung Galaxy Buds2 Pro.png' alt='Samsung Galaxy Buds2 Pro' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Audios/Samsung Galaxy Buds2 Pro.png' alt='Samsung Galaxy Buds2 Pro' class='product-image'>",
     badge: "sale",
     tags: ["360° Audio", "ANC", "Hi-Fi Sound"],
     description: "Samsung's premium buds with 360° Audio, Hi-Fi sound, and comfortable ergonomic design for all-day wear.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      driver: "10mm + 6.5mm dual drivers",
+      anc: "ANC with 3-levels",
+      battery: "5h (ANC on), 18h with case",
+      charging: "Wireless, USB-C",
+      connectivity: "Bluetooth 5.3",
+      features: ["360° Audio", "Hi-Fi Sound", "Voice Detect", "IPX7"],
+      weight: "5.5g per bud",
+      colors: ["White", "Graphite", "Bora Purple"]
+    }
   },
 
   // ---- LAPTOPS ----
@@ -226,12 +370,23 @@ const PRODUCTS = [
     rating: 4.9,
     reviews: 187,
     emoji: "💻",
-    Image: "<img src='/Images/Products_Images/Laptops/MacBook Air M3 (15-inch).png' alt='MacBook Air M3 (15-inch)' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Laptops/MacBook Air M3 (15-inch).png' alt='MacBook Air M3 (15-inch)' class='product-image'>",
     badge: "new",
     tags: ["M3 Chip", "18hr Battery", "Liquid Retina"],
     description: "Apple's supercharged thin and light laptop with the powerful M3 chip, 18-hour battery, and fanless design.",
     inStock: true,
-    featured: true
+    featured: true,
+    specs: {
+      display: "15.3\" Liquid Retina, 2880x1864",
+      processor: "Apple M3 (8-core CPU, 10-core GPU)",
+      ram: "8GB / 16GB / 24GB Unified",
+      storage: "256GB / 512GB / 1TB SSD",
+      battery: "66.5Wh, 18 hours",
+      ports: ["2x Thunderbolt 4", "MagSafe 3", "3.5mm"],
+      os: "macOS Sonoma",
+      weight: "1.51kg",
+      colors: ["Starlight", "Space Gray", "Midnight", "Silver"]
+    }
   },
   {
     id: 15,
@@ -242,12 +397,24 @@ const PRODUCTS = [
     rating: 4.7,
     reviews: 98,
     emoji: "💻",
-    Image: "<img src='/Images/Products_Images/Laptops/Dell XPS 15 (2024).png' alt='Dell XPS 15 (2024)' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Laptops/Dell XPS 15 (2024).png' alt='Dell XPS 15 (2024)' class='product-image'>",
     badge: "sale",
     tags: ["Intel i9", "4K OLED", "RTX 4060"],
     description: "Dell's premium 15-inch laptop with stunning 4K OLED display, Intel 14th Gen processor, and NVIDIA RTX graphics.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      display: "15.6\" 3.5K OLED, 120Hz, Touch",
+      processor: "Intel Core i9-13900H",
+      ram: "16GB / 32GB / 64GB DDR5",
+      storage: "512GB / 1TB / 2TB NVMe SSD",
+      graphics: "NVIDIA RTX 4060 8GB",
+      battery: "85Wh, up to 12 hours",
+      ports: ["2x Thunderbolt 4", "USB-C", "SD card reader", "3.5mm"],
+      os: "Windows 11 Home",
+      weight: "1.92kg",
+      colors: ["Platinum Silver"]
+    }
   },
   {
     id: 16,
@@ -258,12 +425,24 @@ const PRODUCTS = [
     rating: 4.6,
     reviews: 76,
     emoji: "💻",
-    Image: "<img src='/Images/Products_Images/Laptops/Lenovo ThinkPad X1 Carbon.png' alt='Lenovo ThinkPad X1 Carbon' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Laptops/Lenovo ThinkPad X1 Carbon.png' alt='Lenovo ThinkPad X1 Carbon' class='product-image'>",
     badge: null,
     tags: ["Ultra-light", "Intel vPro", "MIL-SPEC"],
     description: "The business-class ultra-portable with military-grade durability, legendary ThinkPad keyboard, and all-day battery.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      display: "14\" 2.8K OLED, 120Hz",
+      processor: "Intel Core i7-1365U vPro",
+      ram: "16GB / 32GB LPDDR5",
+      storage: "512GB / 1TB NVMe SSD",
+      graphics: "Intel Iris Xe",
+      battery: "57Wh, up to 14 hours",
+      ports: ["2x Thunderbolt 4", "USB-A", "HDMI", "3.5mm"],
+      os: "Windows 11 Pro",
+      weight: "1.12kg",
+      colors: ["Black"]
+    }
   },
   {
     id: 17,
@@ -274,12 +453,24 @@ const PRODUCTS = [
     rating: 4.6,
     reviews: 63,
     emoji: "💻",
-    Image: "<img src='/Images/Products_Images/Laptops/HP Spectre x360 14.png' alt='HP Spectre x360 14' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Laptops/HP Spectre x360 14.png' alt='HP Spectre x360 14' class='product-image'>",
     badge: "sale",
     tags: ["2-in-1", "OLED Touch", "Intel Evo"],
     description: "HP's stunning 2-in-1 convertible laptop with OLED touchscreen, Intel Evo platform, and gem-cut premium design.",
     inStock: false,
-    featured: false
+    featured: false,
+    specs: {
+      display: "13.5\" 3K2K OLED Touch, 120Hz",
+      processor: "Intel Core i7-1355U",
+      ram: "16GB / 32GB LPDDR4x",
+      storage: "512GB / 1TB NVMe SSD",
+      graphics: "Intel Iris Xe",
+      battery: "66Wh, up to 13 hours",
+      ports: ["2x Thunderbolt 4", "USB-A", "3.5mm"],
+      os: "Windows 11 Home",
+      weight: "1.36kg",
+      colors: ["Nightfall Blue", "Pale Blue", "Natural Silver"]
+    }
   },
 
   // ---- ACCESSORIES ----
@@ -292,12 +483,22 @@ const PRODUCTS = [
     rating: 4.8,
     reviews: 312,
     emoji: "🔌",
-    Image: "<img src='/Images/Products_Images/Accessories/Anker 65W GaN Prime Charger.png' alt='Anker 65W GaN Prime Charger' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Accessories/Anker 65W GaN Prime Charger.png' alt='Anker 65W GaN Prime Charger' class='product-image'>",
     badge: "sale",
     tags: ["GaN Technology", "3 Ports", "PowerIQ 4.0"],
     description: "Charge 3 devices simultaneously with GaN technology. Compact design packs laptop-level power in pocket size.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      output: "65W max",
+      ports: "2x USB-C + 1x USB-A",
+      technology: "GaN III, PowerIQ 4.0",
+      input: "100-240V ~ 1.5A 50-60Hz",
+      protection: ["Overcurrent", "Overvoltage", "Overheat"],
+      dimensions: "38 x 38 x 45mm",
+      weight: "105g",
+      compatibility: ["Laptops", "Tablets", "Phones", "Nintendo Switch"]
+    }
   },
   {
     id: 19,
@@ -308,12 +509,23 @@ const PRODUCTS = [
     rating: 4.5,
     reviews: 167,
     emoji: "🔋",
-    Image: "<img src='/Images/Products_Images/Accessories/Samsung 25000mAh Power Bank.png' alt='Samsung 25000mAh Power Bank' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Accessories/Samsung 25000mAh Power Bank.png' alt='Samsung 25000mAh Power Bank' class='product-image'>",
     badge: "new",
     tags: ["45W Fast Charge", "USB-C PD", "LCD Display"],
     description: "High-capacity power bank with 45W fast charging, LCD battery display, and ability to charge laptops on the go.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      capacity: "25000mAh",
+      output: "45W max (USB-C PD)",
+      ports: "2x USB-C + 1x USB-A",
+      input: "45W via USB-C",
+      display: "LCD battery indicator",
+      protection: ["Overcurrent", "Overvoltage", "Overheat", "Reverse current"],
+      dimensions: "148 x 72 x 27mm",
+      weight: "490g",
+      features: ["Pass-through charging", "Low current mode"]
+    }
   },
   {
     id: 20,
@@ -324,12 +536,23 @@ const PRODUCTS = [
     rating: 4.9,
     reviews: 289,
     emoji: "🖱️",
-    Image: "<img src='/Images/Products_Images/Accessories/Logitec Mouse.jpg' alt='Logitech MX Master 3S' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Accessories/Logitec Mouse.jpg' alt='Logitech MX Master 3S' class='product-image'>",
     badge: "sale",
     tags: ["8K DPI", "Quiet Clicks", "Multi-Device"],
     description: "The ultimate productivity mouse with ultra-precise tracking, near-silent clicks, and ergonomic sculpted design.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      sensor: "8000 DPI Darkfield",
+      buttons: "7 customizable",
+      battery: "70 days on full charge",
+      charging: "USB-C, 1 min = 3 hours",
+      connectivity: "Bluetooth, 2.4GHz receiver",
+      features: ["MagSpeed scroll", "Quiet Clicks", "Flow cross-computer"],
+      dimensions: "124.9 x 84.3 x 51mm",
+      weight: "141g",
+      compatibility: ["Windows", "macOS", "Linux", "iPadOS"]
+    }
   },
 
   // ---- CAMERAS ----
@@ -342,12 +565,24 @@ const PRODUCTS = [
     rating: 4.8,
     reviews: 156,
     emoji: "📷",
-    Image: "<img src='/Images/Products_Images/Cameras/Canon EOS R6 Mark II.png' alt='Canon EOS R6 Mark II' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Cameras/Canon EOS R6 Mark II.png' alt='Canon EOS R6 Mark II' class='product-image'>",
     badge: "new",
     tags: ["24MP", "4K 60p", "IBIS", "Eye AF"],
     description: "Professional mirrorless camera with 24MP full-frame sensor, 4K 60p video, and advanced autofocus for creators.",
     inStock: true,
-    featured: true
+    featured: true,
+    specs: {
+      sensor: "24.2MP Full-Frame CMOS",
+      video: "4K 60p, 6K RAW, FHD 180p",
+      iso: "100-102400 (expandable to 204800)",
+      autofocus: "Dual Pixel CMOS AF II, Eye AF",
+      stabilization: "In-body 8-stop IBIS",
+      burst: "40fps (electronic), 12fps (mechanical)",
+      screen: "3\" 1.62M dot vari-angle",
+      connectivity: "WiFi, Bluetooth, USB-C, HDMI",
+      weight: "670g (body only)",
+      memory: "Dual SD UHS-II"
+    }
   },
   {
     id: 22,
@@ -358,12 +593,24 @@ const PRODUCTS = [
     rating: 4.9,
     reviews: 203,
     emoji: "📷",
-    Image: "<img src='/Images/Products_Images/Cameras/Sony Alpha a7 IV.png' alt='Sony Alpha a7 IV' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Cameras/Sony Alpha a7 IV.png' alt='Sony Alpha a7 IV' class='product-image'>",
     badge: "sale",
     tags: ["33MP", "4K 60p", "Real-time AF", "5-axis IBIS"],
     description: "Full-frame mirrorless powerhouse with 33MP sensor, 4K 60p video, and exceptional autofocus tracking.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      sensor: "33MP Full-Frame Exmor R CMOS",
+      video: "4K 60p 10-bit, S-Cinetone",
+      iso: "100-51200 (expandable to 204800)",
+      autofocus: "759-point Phase Detection, Real-time Eye AF",
+      stabilization: "5-axis IBIS, 5.5 stops",
+      burst: "10fps, 828 RAW+ JPEG",
+      screen: "3\" 1.03M dot vari-angle touchscreen",
+      connectivity: "WiFi, Bluetooth, USB-C, HDMI, FTP",
+      weight: "658g (body only)",
+      memory: "CFexpress Type A + SD UHS-II"
+    }
   },
   {
     id: 23,
@@ -374,12 +621,24 @@ const PRODUCTS = [
     rating: 4.7,
     reviews: 89,
     emoji: "📷",
-    Image: "<img src='/Images/Products_Images/Cameras/DJI Pocket 3.png' alt='DJI Pocket 3' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Cameras/DJI Pocket 3.png' alt='DJI Pocket 3' class='product-image'>",
     badge: "new",
     tags: ["4K 120fps", "3-axis Gimbal", "AI Tracking", "Pocket Size"],
     description: "Compact 3-axis gimbal camera with 4K 120fps video, AI subject tracking, and professional stabilization.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      sensor: "1\" CMOS, 48MP",
+      video: "4K 120fps, 10-bit D-Log M",
+      photo: "48MP, RAW",
+      stabilization: "3-axis mechanical gimbal",
+      display: "2\" OLED touchscreen",
+      battery: "1650mAh, 166 min runtime",
+      connectivity: "WiFi, Bluetooth, USB-C",
+      features: ["AI Tracking", "ActiveTrack 6.0", "SpinShot", "Timelapse"],
+      weight: "179g",
+      storage: "microSD up to 512GB"
+    }
   },
   {
     id: 24,
@@ -390,12 +649,25 @@ const PRODUCTS = [
     rating: 4.6,
     reviews: 134,
     emoji: "📷",
-    Image: "<img src='/Images/Products_Images/Cameras/GoPro HERO12 Silver.png' alt='GoPro HERO12 Silver' class='product-image'>",
+    Image: "<img src='Images/Products_Images/Cameras/GoPro HERO12 Silver.png' alt='GoPro HERO12 Silver' class='product-image'>",
     badge: "sale",
     tags: ["5.3K 60fps", "HyperSmooth 6.0", "Waterproof", "TimeWarp"],
     description: "Rugged action camera with 5.3K 60fps video, HyperSmooth 6.0 stabilization, and waterproof design for adventure.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      sensor: "1/1.9\" CMOS",
+      video: "5.3K 60fps, 4K 120fps",
+      photo: "27MP, RAW",
+      stabilization: "HyperSmooth 6.0",
+      waterproof: "10m (33ft) without housing",
+      battery: "1720mAh, 70 min recording",
+      display: "2.27\" rear + 1.4\" front",
+      connectivity: "WiFi, Bluetooth, USB-C",
+      features: ["TimeWarp", "HindSight", "SuperPhoto", "Webcam"],
+      weight: "154g",
+      storage: "microSD up to 256GB"
+    }
   },
 
   // ---- SMART TOYS ----
@@ -408,12 +680,22 @@ const PRODUCTS = [
     rating: 4.6,
     reviews: 58,
     emoji: "🤖",
-    Image: "<img src='/Images/Products_Images/Children's_Toy/Robo-Ally Interactive Robot.png' alt='Robo-Ally Interactive Robot' class='product-image'>",
+    Image: "<img src='Images/Products_Images/ChildrenToys/Robo-Ally Interactive Robot.png' alt='Robo-Ally Interactive Robot' class='product-image'>",
     badge: "sale",
     tags: ["Voice Control", "App Control", "Educational", "Rechargeable"],
     description: "Interactive robot companion with voice recognition, app control, and educational features. Perfect for kids aged 6+.",
     inStock: true,
-    featured: true
+    featured: true,
+    specs: {
+      control: "Voice commands + App (iOS/Android)",
+      battery: "Rechargeable, 4-6 hours playtime",
+      features: ["Face expressions", "Dance moves", "Storytelling", "Q&A mode"],
+      sensors: ["Touch sensors", "Obstacle detection"],
+      material: "ABS plastic, BPA-free",
+      dimensions: "25 x 18 x 30cm",
+      ageRange: "6+ years",
+      connectivity: "Bluetooth 5.0"
+    }
   },
   {
     id: 26,
@@ -424,12 +706,22 @@ const PRODUCTS = [
     rating: 4.5,
     reviews: 42,
     emoji: "🧱",
-    Image: "<img src='/Images/Products_Images/Children's_Toys/Smart Building Blocks Pro.png' alt='Smart Building Blocks Pro' class='product-image'>",
+    Image: "<img src='Images/Products_Images/ChildrenToys/Smart Building Blocks Pro.png' alt='Smart Building Blocks Pro' class='product-image'>",
     badge: "new",
     tags: ["STEM Learning", "App Guided", "500+ Pieces", "Ages 4+"],
     description: "Creative building blocks with app-guided tutorials. Enhances problem-solving skills and creativity in children.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      pieces: "500+ colorful building blocks",
+      app: "iOS/Android, 200+ models",
+      features: ["Step-by-step tutorials", "3D view", "Challenge mode"],
+      learning: ["Spatial awareness", "Problem solving", "Creativity"],
+      material: "ABS plastic, non-toxic",
+      storage: "Reusable storage box",
+      ageRange: "4+ years",
+      battery: "2x AA (not included)"
+    }
   },
   {
     id: 27,
@@ -440,12 +732,23 @@ const PRODUCTS = [
     rating: 4.7,
     reviews: 76,
     emoji: "🚁",
-    Image: "<img src='/Images/Products_Images/Children's_Toys/Drone Explorer Mini.png' alt='Drone Explorer Mini' class='product-image'>",
+    Image: "<img src='Images/Products_Images/ChildrenToys/Drone Explorer Mini.png' alt='Drone Explorer Mini' class='product-image'>",
     badge: "sale",
     tags: ["GPS", "HD Camera", "30min Flight", "Beginner Friendly"],
     description: "Kid-friendly drone with GPS, HD camera, and 30-minute flight time. Easy to fly with auto-return home feature.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      camera: "1080p HD, 120° FOV",
+      flightTime: "30 minutes",
+      range: "500m control distance",
+      gps: "GPS + GLONASS dual positioning",
+      features: ["Auto Return Home", "Follow Me", "Waypoint Flight", "Headless Mode"],
+      battery: "3x 1800mAh LiPo (included)",
+      weight: "249g ( FAA registration required)",
+      ageRange: "14+ years",
+      safety: ["Low battery alarm", "Out of range alert", "Emergency stop"]
+    }
   },
   {
     id: 28,
@@ -456,12 +759,23 @@ const PRODUCTS = [
     rating: 4.8,
     reviews: 89,
     emoji: "📲",
-    Image: "<img src='/Images/Products_Images/Children's_Toys/Smart Learning Tablet Pro.png' alt='Smart Learning Tablet Pro' class='product-image'>",
+    Image: "<img src='Images/Products_Images/ChildrenToys/Smart Learning Tablet Pro.png' alt='Smart Learning Tablet Pro' class='product-image'>",
     badge: "sale",
     tags: ["Educational Games", "Parental Control", "Ages 3-10", "Durable"],
     description: "Educational tablet designed for children with parental controls, age-appropriate games, and durable kid-proof case.",
     inStock: true,
-    featured: false
+    featured: false,
+    specs: {
+      display: "10.1\" HD IPS touchscreen",
+      storage: "32GB + 128GB expandable",
+      battery: "6000mAh, 8 hours use",
+      camera: "2MP front + 5MP rear",
+      features: ["Parental control app", "Age-appropriate content", "Learning games"],
+      protection: "Kid-proof silicone case",
+      os: "Android 13 (Kids Edition)",
+      ageRange: "3-10 years",
+      connectivity: "WiFi, Bluetooth 5.0"
+    }
   }
 ];
 
