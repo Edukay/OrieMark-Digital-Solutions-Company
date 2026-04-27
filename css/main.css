@@ -1497,7 +1497,28 @@ footer {
   .nav-links, .nav-right .btn { display: none; }
   .hamburger { display: flex; }
   .cart-btn { display: flex; }
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid { 
+    grid-template-columns: 1fr; 
+    display: flex; 
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    gap: 16px; 
+    padding-bottom: 16px; 
+    margin-top: 12px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .services-grid::-webkit-scrollbar { display: none; }
+  .services-grid .service-card { 
+    flex: 0 0 calc(100vw - 48px); 
+    min-height: 220px; 
+    scroll-snap-align: start; 
+    display: flex; 
+    flex-direction: column; 
+  }
+  .services-grid .service-card:nth-child(5) { flex: 0 0 calc(100vw - 48px); }
+  .service-card { padding: 24px; }
+  .sc-desc { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
   .hero-actions .btn-lg { flex: 1; justify-content: center; }
   .hero-stats { gap: 24px; }
   .chat-window { width: calc(100vw - 32px); right: 16px; }
